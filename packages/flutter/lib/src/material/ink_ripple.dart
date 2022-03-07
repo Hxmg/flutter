@@ -9,7 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'ink_well.dart';
 import 'material.dart';
 
-const Duration _kUnconfirmedRippleDuration = Duration(seconds: 1);
+const Duration _kUnconfirmedRippleDuration = Duration(milliseconds: 1000); //1s
 const Duration _kFadeInDuration = Duration(milliseconds: 75);
 const Duration _kRadiusDuration = Duration(milliseconds: 225);
 const Duration _kFadeOutDuration = Duration(milliseconds: 375);

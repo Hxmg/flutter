@@ -830,10 +830,10 @@ class _InkResponseState extends State<_InkResponseStateWidget>
   Duration getFadeDurationForType(_HighlightType type) {
     switch (type) {
       case _HighlightType.pressed:
-        return const Duration(milliseconds: 200);
+        return const Duration(milliseconds: 300);
       case _HighlightType.hover:
       case _HighlightType.focus:
-        return const Duration(milliseconds: 50);
+        return const Duration(milliseconds: 200);
     }
   }
 
@@ -992,7 +992,7 @@ class _InkResponseState extends State<_InkResponseStateWidget>
     _splashes!.add(splash);
     _currentSplash = splash;
     updateKeepAlive();
-    updateHighlight(_HighlightType.pressed, value: true);
+    //updateHighlight(_HighlightType.pressed, value: true);
   }
 
   void _handleTap() {
