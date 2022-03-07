@@ -9,11 +9,11 @@ import 'package:flutter/widgets.dart';
 import 'ink_well.dart';
 import 'material.dart';
 
-const Duration _kUnconfirmedSplashDuration = Duration(seconds: 1);
-const Duration _kSplashFadeDuration = Duration(milliseconds: 200);
+const Duration _kUnconfirmedSplashDuration = Duration(milliseconds: 300); //300
+const Duration _kSplashFadeDuration = Duration(milliseconds: 300); //200
 
 const double _kSplashInitialSize = 0.0; // logical pixels
-const double _kSplashConfirmedVelocity = 1.0; // logical pixels per millisecond
+const double _kSplashConfirmedVelocity = 0.5; // logical pixels per millisecond
 
 RectCallback? _getClipCallback(RenderBox referenceBox, bool containedInkWell, RectCallback? rectCallback) {
   if (rectCallback != null) {
@@ -174,7 +174,7 @@ class InkSplash extends InteractiveInkFeature {
   void confirm() {
     final int duration = (_targetRadius / _kSplashConfirmedVelocity).floor();
     _radiusController
-      ..duration = Duration(milliseconds: duration)
+      ..duration = Duration(milliseconds: duration * 4)
       ..forward();
     _alphaController!.forward();
   }

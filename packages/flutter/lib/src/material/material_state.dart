@@ -235,13 +235,13 @@ abstract class MaterialStateMouseCursor extends MouseCursor implements MaterialS
 
   /// A mouse cursor for clickable material widgets, which resolves differently
   /// when the widget is disabled.
-  ///
+  /// 改过
   /// By default this cursor resolves to [SystemMouseCursors.click]. If the widget is
   /// disabled, the cursor resolves to [SystemMouseCursors.basic].
   ///
   /// This cursor is the default for many Material widgets.
   static const MaterialStateMouseCursor clickable = _EnabledAndDisabledMouseCursor(
-    enabledCursor: SystemMouseCursors.click,
+    enabledCursor: SystemMouseCursors.basic,
     disabledCursor: SystemMouseCursors.basic,
     name: 'clickable',
   );

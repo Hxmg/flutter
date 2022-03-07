@@ -3,6 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:flutter/widgets.dart';
+import 'dart:async';
+import 'dart:math';
 
 import 'ink_well.dart' show InteractiveInkFeature;
 import 'material.dart';
@@ -94,6 +96,20 @@ class InkHighlight extends InteractiveInkFeature {
   /// Stop visually emphasizing this part of the material.
   void deactivate() {
     _active = false;
+    // if (_alphaController.value < 0.41) { //mod
+    //   int dur = 50;
+    //   if (_alphaController.duration?.inMilliseconds != null) {
+    //     dur = _alphaController.duration?.inMilliseconds as int;
+    //   }
+    //   dur = (dur * 0.41 - _alphaController.value).toInt();
+    //   Timer(Duration(milliseconds: dur as int), () {
+    //     if (!_active && _alphaController.) {
+    //       _alphaController.reverse();
+    //     }
+    //   });
+    // }else {
+    //   _alphaController.reverse();
+    // }
     _alphaController.reverse();
   }
 

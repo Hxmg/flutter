@@ -357,15 +357,17 @@ class IconButton extends StatelessWidget {
         autofocus: autofocus,
         canRequestFocus: onPressed != null,
         onTap: onPressed,
-        mouseCursor: mouseCursor ?? (onPressed == null ? SystemMouseCursors.forbidden : SystemMouseCursors.click),
+        mouseCursor: mouseCursor ?? (onPressed == null ? SystemMouseCursors.forbidden : SystemMouseCursors.basic),
         enableFeedback: enableFeedback,
         focusColor: focusColor ?? theme.focusColor,
         hoverColor: hoverColor ?? theme.hoverColor,
         highlightColor: highlightColor ?? theme.highlightColor,
         splashColor: splashColor ?? theme.splashColor,
         radius: splashRadius ?? math.max(
-          Material.defaultSplashRadius,
-          (effectiveIconSize + math.min(padding.horizontal, padding.vertical)) * 0.7,
+          //Material.defaultSplashRadius,
+          0,
+          (effectiveIconSize + math.min(padding.horizontal, padding.vertical)) * 0.5,
+          
           // x 0.5 for diameter -> radius and + 40% overflow derived from other Material apps.
         ),
         child: result,
